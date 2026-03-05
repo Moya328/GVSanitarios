@@ -13,7 +13,7 @@ function iniciarApp() {
     console.log("GV Sanitarios iniciado ✅");
 
     iniciarWhatsapp();
-    detectarHorario();
+    iniciarHorarios();
 }
 
 
@@ -47,25 +47,18 @@ function iniciarWhatsapp() {
 // =============================
 // DETECTAR HORARIO
 // =============================
-function detectarHorario() {
+function iniciarHorarios() {
 
-    const ahora = new Date();
+    const boton = document.getElementById("btnHorarios");
+    const horarios = document.getElementById("horarios");
 
-    const hora = ahora.getHours();
-    const dia = ahora.getDay();
+    boton.addEventListener("click", function () {
 
-    console.log("Día:", dia, "Hora:", hora);
+        if (horarios.style.display === "block") {
+            horarios.style.display = "none";
+        } else {
+            horarios.style.display = "block";
+        }
 
-    let abierto = false;
-
-    // Lunes(1) a Sábado(6)
-    if (dia >= 1 && dia <= 6 && hora >= 8 && hora < 18) {
-        abierto = true;
-    }
-
-    if (abierto) {
-        console.log("Local ABIERTO 🟢");
-    } else {
-        console.log("Local CERRADO 🔴");
-    }
+    });
 }
