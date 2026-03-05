@@ -1,0 +1,84 @@
+/* =============================
+   GV SANITARIOS - LINK STYLE
+============================= */
+
+:root {
+    --naranja: #ff7a00;
+    --negro: #1a1a1a;
+    --gris: #f3f3f3;
+}
+
+/* BODY */
+body {
+    font-family: system-ui, Arial, sans-serif;
+    background: linear-gradient(180deg, #ffffff, #f5f5f5);
+    margin: 0;
+}
+
+/* HERO */
+.hero {
+    min-height: 100vh;
+    padding-top: 60px;
+}
+
+/* CONTENEDOR CENTRAL */
+.hero-container {
+    width: 100%;
+    max-width: 420px;
+}
+
+/* LOGO */
+.logo {
+    width: 140px;
+}
+
+/* TITULO */
+h1 {
+    font-size: 28px;
+    letter-spacing: 2px;
+    color: var(--negro);
+}
+
+/* SUBTITULO */
+.subtitle {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* BOTONES STACK */
+.botones {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* BOTON PRINCIPAL */
+.btn-gv {
+    background: var(--naranja);
+    color: white;
+    padding: 14px;
+    border-radius: 12px;
+    font-weight: 600;
+    border: none;
+    transition: 0.25s;
+}
+
+.btn-gv:hover {
+    background: #e46c00;
+    transform: scale(1.02);
+}
+
+/* BOTONES SECUNDARIOS */
+.btn-gv-outline {
+    background: white;
+    border: 2px solid #eaeaea;
+    padding: 14px;
+    border-radius: 12px;
+    font-weight: 500;
+    transition: 0.25s;
+}
+
+.btn-gv-outline:hover {
+    border-color: var(--naranja);
+    transform: scale(1.02);
+}
