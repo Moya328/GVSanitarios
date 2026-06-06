@@ -72,6 +72,20 @@ body {
 
     max-width: 420px;
     width: 90%;
+    animation: aparecerCard 0.8s ease-out;
+}
+
+@keyframes aparecerCard {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 
 }
 
@@ -112,6 +126,8 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    padding: 12px 18px;
+    font-size: 16px;
 }
 
 /* BOTONES SECUNDARIOS */
@@ -127,10 +143,14 @@ h1 {
     border-radius: 12px;
 
     font-weight: 600;
+
+    transition: all 0.25s ease;
 }
 
 .btn-gv-outline:hover {
     background: #e96f00;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* BOTON WHATSAPP */
@@ -162,19 +182,53 @@ h1 {
     transform: scale(1.02);
 }
 
-/* BOTON HORARIOS */
+/* MODAL HORARIOS */
 
-.horarios {
+.modal-content {
 
-    display: none;
+    border-radius: 18px;
+    border: none;
 
-    background: #f7f7f7;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
 
-    padding: 12px;
+    animation: modalEntrada 0.35s ease;
+}
 
-    border-radius: 10px;
+/* animacion */
 
-    font-size: 14px;
+@keyframes modalEntrada {
 
-    color: #555;
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+}
+
+.modal-header {
+
+    border-bottom: none;
+
+}
+
+.modal-title {
+
+    font-weight: 600;
+}
+
+/* mejora visual para celulares */
+
+@media (max-width: 576px) {
+
+    .hero-container {
+
+        padding: 25px;
+
+    }
+
 }
